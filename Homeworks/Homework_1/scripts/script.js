@@ -46,3 +46,56 @@ for (let i = 1; i < arr3.length; i++) {
 }
 
 console.log(maxElement);
+
+
+console.log("1. Средний уровень сложности:");
+console.log("Напишите цикл, который выводит в консоль все простые числа от 2 до 100.");
+
+for (let index = 2; index < 100; index++) {
+  if (index % 2 === 0) {
+    console.log(index);
+  }
+  
+}
+
+console.log("2. Напишите цикл, который находит среднее арифметическое всех чисел в массиве.");
+
+const arr4 = [3, 7, 88, 99, 14, 5, 9];
+let sumArr4 = 0;
+
+for (let index = 0; index < arr4.length; index++) {
+  sumArr4 += arr4[index];  
+}
+let average = sumArr4 / arr1.length;
+
+console.log("Среднее арифметическое массива: " + average);
+
+console.log("3. Напишите цикл, который выводит в консоль таблицу умножения на 5.");
+for (let index = 1; index <= 10; index++) {
+  let result = 5 * index;
+  console.log("5 * " + index + " = " + result);
+}
+
+console.log("4. Напишите цикл, который переворачивает порядок элементов в массиве.");
+
+const arr5 = [1, 2, 3, 4, 5];
+let reversedArr = [];
+
+for (let i = arr5.length - 1; i >= 0; i--) {
+  reversedArr.push(arr5[i]);
+}
+
+console.log("Исходный массив: " + arr5);
+console.log("Перевернутый массив: " + reversedArr);
+
+console.log("5. Напишите цикл, который находит сумму элементов массива, кратных 3 или 5.")
+const arr6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sumArr6 = 0;
+
+for (let i = 0; i < arr6.length; i++) {
+  if (arr6[i] % 3 === 0 || arr6[i] % 5 === 0) {
+    sum += arr6[i];
+  }
+}
+
+console.log("Сумма элементов массива, кратных 3 или 5: " + sum);
