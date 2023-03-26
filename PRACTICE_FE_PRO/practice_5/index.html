@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p>wefwef</p>
+  <span>wefwef</span>
+  <div>wefwef</div> 
+</body>
+
+<script>
+
+// Задача написать функцию которая принимает 2 аргумента
+    // первый - функция, второй - число
+    // и надо выполнить функцию из первого аргумента столько раз сколько у нас число во втором аргументе
+    // myInterval(() => {}, 10)
+    // function myInterval(func, number) {
+    //   for (let i = 0; i < number; i++) {
+    //     func();     
+    //   }
+   
+    // }
+    // const myFunc = () => {
+    //   console.log(Math.random());
+    // }    
+    // myInterval(myFunc, 3);
+
+  //   function getMyName(func, number) {
+  //     for (let i = 0; i < number; i++) {
+  //           func();     
+  //     }
+   
+  //   }
+  //   const myName = () => {
+  //     console.log("Sasha")
+  //   }
+  //  getMyName(myName, 7)
+
+  // function writeNameIntoBody(name) {
+  //   document.body.innerHTML = `<p>${name}!</p>`     
+  // }
+  // writeNameIntoBody("Sasha")
+
+  // const getElement = (tag) => {
+  //   return document.querySelector(tag)          
+  // }
+  // console.log(getElement("div"))
+
+  /*
+    Создать объект названием Calculations
+    У объекта должны быть свойства:
+    - squarePow - это должна быть функция которая возводит число в квадрат
+    - cubePow - это должна быть функция которая возводит число в куб
+    - downNumber - это должна быть функция которая округлять число в меньшую сторону
+    Каждая функция должна принимать один аргумент (число) и вовращать результат
+    */
+
+
+   const Calculations = {
+    squarePow: function(num) {
+      return Math.pow(num, 2);
+    },
+    cubePow: function(num) {
+      return Math.pow(num, 3);
+    },
+    downNumber: function(num) {
+      return Math.floor(num);
+    } 
+   }
+
+  //  Создать объект названием View
+  //   У объекта должны быть свойства (все свойства функции):
+  //   - addParagraph - добавляет параграф в body
+  //   аргументы (текст, цвет, размер шрифта)
+  //   - changeBodyColor - меняет цвет body
+  //   aргументы (цвет)
+  //   - addImage - добавляет картинку в body
+  //   аргументы (путь к картинке, ширина, высота)
+
+</script>
+</html>

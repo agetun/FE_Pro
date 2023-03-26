@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+<script>
+  const array = [1,2,3,4,5,5];
+
+  // 1 задание:
+
+// Надо все элементы массива вывести в консоль лог по очереди
+
+// for (let i = 0; i < array.length; i++) {
+//   console.log(array[i]);
+  
+// }
+array.forEach(element => console.log(element));
+
+ /*
+      Перебрать массив array и в консоль показать только четные числа
+      Нельзя использовать for и while
+    */
+array.forEach(el => el % 2 === 0 ? console.log(el) : '');
+// const array_even = array.map(el) => (el % 2 === 0 && el);
+
+array.filter(element => element % 2 === 0).forEach(element => console.log(element));
+
+  /*
+      Вывести в консоль массив где все элементы из array будут умножены на 1000 -> [1000, 2000, 3000, 4000, 5000, 5000]
+      Нельзя использовать for и while
+    */
+
+const array_new = [];
+array.forEach(el => array_new.push(el * 1000));
+console.log(array_new);
+
+const multi = array.map(element => element * 1000);
+console.log(multi);
+
+ /*
+      Вывести в консоль только сообщения с type === 'My'
+      Надо воспользоваться filter методом массива
+      Вывести в консоль массив
+    */
+
+    const array1 = [
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];
+
+/*
+  Перебрать массив array и в консоль показать только четные числа
+  Нельзя использовать for и while
+*/`,
+        type: "My",
+      },
+      {
+        text: `array.forEach(el => el % 2 === 0 ? console.log(el) : '')`,
+        type: "NotMy",
+      },
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];`,
+        type: "My",
+      },
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];`,
+        type: "My",
+      },
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];`,
+        type: "My",
+      },
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];`,
+        type: "My",
+      },
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];`,
+        type: "My",
+      },
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];`,
+        type: "My",
+      },
+    ];
+
+const newArray1 = array1.filter((el) => el.type === "My");
+
+  console.log(newArray1);
+
+
+</script>
+</html>
