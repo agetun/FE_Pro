@@ -11,6 +11,11 @@ const uppLetter = uppFirstLetter(strings1)
 
 console.log(uppLetter)
 
+const firstLetterUp = arr => arr.map(str => str.charAt(0).toUpperCase() + str.slice(1));
+const firstLetterUp1 = arr => arr.map(str => str[0].toUpperCase() + str.slice(1));
+
+console.log(firstLetterUp1(['hello', 'hey', 'apple', 'orange']));
+
 // 2. Напишите функцию, которая принимает массив чисел и возвращает новый массив чисел, содержащий только положительные числа.
 
 const arr = [7, 9, -14, 3, -8, -3, 77, 9]

@@ -88,3 +88,8 @@ for (let i = 0; i < numbers.length; i++) {
 
 console.log(div_pos_numbers);
 
+
+const num_forEach = [];
+
+numbers.forEach(el => el > 0 ? num_forEach.push(el) : '');
+console.log(num_forEach)
