@@ -81,4 +81,13 @@ console.log(userArr2);
 
 // ****
 // 1. Сформировать новый массив, где пользователи будут отсортированы по возрасту (.sort())
+const users_new = users.map(el => el);
+[...users_new].sort((a, b) => b - a)
+// const { age } = users;
+// users.sort();
+console.log(users_new)
+
 // 2. Найти сумму возрастов всех пользователей (.reduce())
+const { age } = users;
+const sumAge = users.reduce((acc, el) => acc + el, 0);
+console.log(sumAge);
