@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  background-color: #FFE44D;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  gap: 40px;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+ul li {
+  list-style: none;
+}
+  
+.burger_icon {
+  border: 1px solid black;
+  font-size: 20px;
+  padding: 3px 10px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .burger_icon {
+    display: block;
+  }
+
+  ul {
+    flex-direction: column;
+    position: end;
+  }
+}

@@ -1,0 +1,50 @@
+https://nodejs.org/en
+
+1) Устанавливаем версию
+
+v18.16.0
+
+2) npm install -g create-react-app
+
+если выдаёт ошибку то нужно выполнить
+
+sudo npm install -g create-react-app
+
+
+
+3) потом перед работой выполняем
+создаётся папка myapp файлы объёмные, долго качаются
+это нужно делать перед работой 
+
+npx create-react-app myapp
+
+4) потом переходим в Терминале в папку myapp
+ cd myapp
+в Терминале из папки myapp выполняем команду
+  npm start
+
+5) Удаляем все файлы из папки public КРОМЕ файла  index.html
+
+Из папки src оставляем файлы app.css, app.js, index.js
+index.css
+
+6) Установить расширение ES7+ React/Redux/ и ещё
+Auto Close Tag, Auto Rename Tag
+
+7) Заходим Setting Extension immen include Languages - в этом разделе нажимаем Add и добавляем значения  javascript javascriptreact (это для подсказок при написании кода)
+
+rfce
+
+8) Чтобы проект много места на диске не занимал, можно
+удалить папку node_modules. Можно также склонировать нужный проект git clone 'link Github', затем 
+перехожу в папку проекта и запускаю команду (подгрузятся
+все нужные модули)
+
+npm install
+
+
+
+
+ 
+
+

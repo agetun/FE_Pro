@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { books_data } from './data/books_data'
+import BooksContainer from './components/BooksContainer';
+import AddBookForm from './components/AddBookForm';
+
 
 function App() {
+
+  const [ books, setBooks ] = useState(books_data)
+
+  const delete_book = (id) => setBooks(books.filter((elem) => elem.id !== id));
+
+  const add_book = book_item => setBooks([...books, book_item]);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>  
+      <AddBookForm add_book={add_book} />    
+      <BooksContainer books ={books} delete_book={delete_book} />
     </div>
   );
 }

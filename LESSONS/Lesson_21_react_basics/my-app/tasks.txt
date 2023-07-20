@@ -1,0 +1,18 @@
+1. Создать компонент Product с двумя параграфами: title, price
+2. В Конпоненте App использовать компонент Product три раза с разными данными, данные передать в виде пропсов
+3. В App.js создать массив с 5 объектами (продуктами) и из этого массива создать компоненты Product
+4. Создать в отдельном файле массив products, экспортировать его, импортировать в App
+5. Создать компонент ProductsContainer, создать в нем компоненты Product из массива products
+6. Импортировать ProductsContainer в App
+
+7. Создать в отдельном файле массив users с 6 пользователями (id, firstName, lastName, age, salary)
+8. Создать компоненты UsersContainer и User
+9. В UsersContainer на основе массива users создать User
+10. Добавить компонент UsersContainer в App
+11. В UsersContainer вывести только тех пользователей, чья зарплата превышает 1000
+
+12. Создать TasksContainer и TaskItem
+13. TasksContainer добавить в User
+14. Передать массив tasks в TasksContainer из User через пропс
+15. В TasksContainer создать таски для каждого юзера
+

@@ -1,0 +1,23 @@
+let = arr = [1, 2, -5, 0, -4];
+
+arr.forEach((el, ind, arr) => {
+  console.log(el > 0 ? el:null)
+})
+
+
+const arr = [120, 45, 45, 10];
+
+const result = arr.reduce((acc, cur) => {
+  return acc - cur;
+})
+
+console.log(result);
+ 
+или добавляю 0
+const arr = [120, 45, 45, 10];
+
+const result = arr.reduce((acc, cur) => {
+  return acc - cur;
+}, 0)
+
+console.log(result);

@@ -1,0 +1,10 @@
+/* 
+грид 4 колонки
+отступы между карточками - 40px
+*/
+
+.books_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}

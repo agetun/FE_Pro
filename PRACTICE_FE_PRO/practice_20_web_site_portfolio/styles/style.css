@@ -1,0 +1,45 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 200px;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);     
+    /* margin: 0 auto; */
+    gap: 5px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+
+    /* background-color: green;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    align-content: center; */
+    
+}
+
+@media (max-width: 800px) {
+    .profile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .ProfectComtent {
+    display: grid;
+  }

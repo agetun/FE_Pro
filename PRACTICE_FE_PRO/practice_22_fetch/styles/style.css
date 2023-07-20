@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Container {
+  display: flex;
+  height: 100vh;
+}
+
+.LeftBlock {
+  width: 300px;
+  overflow-y: auto;
+  background-color: lightgray;
+}
+
+.RightBlock {
+  background-color: rgb(162, 17, 17);
+  flex-grow: 1;
+}
+
+.UserBlock {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 10px;
+}
+
+.UserBlock__avatar {
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid;
+}

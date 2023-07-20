@@ -1,0 +1,21 @@
+/* 1 задание: */
+/* Сделать квадратик в html и за счет flex выровнять его по центру экрана */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;  
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

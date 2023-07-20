@@ -1,0 +1,49 @@
+/* 1 задание: */
+/* Сделать враппер для галереи: 5 столбцов и 3 строки */
+/* Сделать с помощью  грида. HTML и CSS используем */
+/* Задание 2 */
+/* Ограничить враппер по ширине */
+/* И центрировать его по горизонтали */
+/* Добавить gap между картинками 5px */
+
+/* Задание на дом:)) 
+
+1 картинку растянуть в гриде на 2 строки и 2 столбца */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 600px;
+    height: 100vh;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);     
+    margin: 0 auto;
+    gap: 5px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+
+    /* background-color: green;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    align-content: center; */
+    
+}
