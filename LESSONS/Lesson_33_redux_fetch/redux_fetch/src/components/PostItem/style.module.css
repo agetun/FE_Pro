@@ -1,0 +1,84 @@
+.post_item {
+  border: 1px solid black;
+  padding: 15px;
+  position: relative;
+}
+
+.post_tags {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.post_tags div {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  width: max-content;
+}
+
+.post_likes button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.history {
+  background-color: orange;
+}
+
+.american {
+  background-color: green;
+}
+
+.crime {
+  background-color: lightblue;
+}
+
+.french {
+  background-color: bisque;
+}
+
+.magical {
+  background-color: aqua;
+}
+
+.fiction {
+  background-color: yellow;
+}
+
+.english {
+  background-color: coral;
+}
+
+.mystery {
+  background-color: darkkhaki;
+}
+
+.love {
+  background-color: chartreuse;
+}
+
+.classic {
+  background-color: lightpink;
+}
+
+.single_tags {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: max-content;
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+}
+
+.delete_post {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+}

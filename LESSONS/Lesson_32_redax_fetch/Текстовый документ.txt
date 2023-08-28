@@ -1,0 +1,4 @@
+https://www.npmjs.com/package/redux-thunk
+
+
+npm i redux-thunk передавать action в dispatch через посредника 

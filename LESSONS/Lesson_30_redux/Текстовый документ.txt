@@ -1,0 +1,3 @@
+npx create-react-app myapp
+
+npm i redux react-redux

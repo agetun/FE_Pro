@@ -17,20 +17,23 @@ export default function Costs(props) {
       return cost.date.getFullYear().toString() === selectedYear;
     });
 
+    
+
   return (
     <div>
       
     <Card className='costs'> 
         <CostFilter year={selectedYear} 
         onChangeYear={yearChangeHandler} /> 
-        {filteredCosts.map(cost => (
+        {filteredCosts.length === 0 ? <p>В этом году расходов нет</p> :
+        filteredCosts.map(cost => (
           <CostItem 
           key={cost.id}
           date={cost.date} 
           description={cost.description} 
           amount={cost.amount}
           />
-        ))}   
+        ))}          
 
         {/* <CostItem 
         date={props.costs[0].date} 

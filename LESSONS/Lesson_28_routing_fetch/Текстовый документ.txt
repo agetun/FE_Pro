@@ -1,0 +1,6 @@
+npx create-react-app myapp
+
+npm i react-router-dom
+
+npm install react-icons
+

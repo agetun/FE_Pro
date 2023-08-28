@@ -1,0 +1,11 @@
+Home
+About
+Categories
+Products
+ProductDescription
+NotFound
+
+// доработать компонент таким образом, чтобы при входе на данную страницу
+// в консоль выводился массив из продуктов 
+
+https://dummyjson.com/products

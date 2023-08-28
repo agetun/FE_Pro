@@ -1,0 +1,5 @@
+npm run dev
+
+
+
+npm i react-router-dom redux react-redux redux-thunk
