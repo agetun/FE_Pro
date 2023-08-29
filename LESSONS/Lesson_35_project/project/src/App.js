@@ -9,9 +9,13 @@ import ProductsByCategoryPage from './pages/ProductsByCategoryPage';
 import SingleProductPage from './pages/SingleProductPage';
 import CartPage from './pages/CartPage';
 import NotFoundPage from './pages/NotFoundPage';
+import { getAllCategories } from './request/categories_req';
  
 
 function App() {
+
+  getAllCategories();
+
   return (
     <div>
       <NavMenu />
