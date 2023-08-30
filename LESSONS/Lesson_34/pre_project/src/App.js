@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Footer from './Footer';
-import NavMenu from './NavMenu';
+import Footer from '../src/components/Footer';
+import NavMenu from '../src/components/NavMenu';
 import MainPage from './pages/MainPage';
 import AllCategoriesPage from './pages/AllCategoriesPage';
 import AllProductsPage from './pages/AllProductsPage';
@@ -10,19 +10,24 @@ import SingleProductPage from './pages/SingleProductPage';
 import CartPage from './pages/CartPage';
 import NotFoundPage from './pages/NotFoundPage';
 import { getAllCategories } from './request/categories_req';
+import { useDispatch } from 'react-redux'
+import { useEffect } from 'react';
 
 
 function App() {
   
-  getAllCategories();
+  const dispatch = useDispatch();
 
+  useEffect(() => dispatch(getAllCategories), []);
+
+  
   return (
     <div>
       <NavMenu />
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/categories' element={<AllCategoriesPage />} />
-        <Route path='/categories/:id' element={<ProductsByCategoryPage />} />
+        <Route path='/categories/:category' element={<ProductsByCategoryPage />} />
         <Route path='/products' element={<AllProductsPage />} />
         <Route path='/products/:id' element={<SingleProductPage />} />
         <Route path='/cart' element={<CartPage />} />
