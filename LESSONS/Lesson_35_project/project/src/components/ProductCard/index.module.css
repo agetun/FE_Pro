@@ -1,0 +1,56 @@
+/* 
+
+.product_card {
+	padding: 100px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+.product_card img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.product_card p {
+	font-size: 25px;
+	font-weight: bold;
+	color: #333;
+} */
+
+/* Стили для сетки .product_grid */
+.product_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Генерируем колонки с автоматической шириной */
+    gap: 20px; /* Расстояние между карточками товаров */
+  }
+  
+  /* Стили для каждой карточки товара .product_card */
+  .product_card {
+    display: flex; /* Используем flexbox для размещения изображения и подписи внутри карточки */
+    flex-direction: column; /* Располагаем элементы в колонку (изображение сверху, подпись снизу) */
+    align-items: center; /* Выравнивание по центру по горизонтали */
+    text-align: center; /* Выравнивание текста по центру */
+  }
+  
+  /* Стили для изображения .product_image */
+  .product_card image {
+    max-width: 100px; /* Максимальная ширина изображения */
+    height: auto; /* Сохранение соотношения сторон изображения */
+  }
+  
+  /* Стили для подписи .product_caption */
+  .product_card p {
+    margin-top: 20px; /* Расстояние между изображением и подписью */
+    font-size: 55px; /* Размер шрифта для подписи */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

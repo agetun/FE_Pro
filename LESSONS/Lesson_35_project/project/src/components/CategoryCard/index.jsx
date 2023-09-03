@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 
-export default function CategoryCard({ id, title }) {
+export default function CategoryCard({ id, title, image }) {
     
   
 
@@ -12,7 +12,11 @@ export default function CategoryCard({ id, title }) {
     <Link to={`/categories/${id}`}>
         <div className={s.category_card}>
 
-          {title}
+          {/* {title} */}
+          
+         {/* это для отрисовки картинок с названием категории, потом стили переделать */}
+      <h3>{title}</h3>
+		  <img src={`http://localhost:3333${image}`} alt={title} />
             
         </div>
     </Link>
