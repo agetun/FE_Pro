@@ -1,7 +1,11 @@
 import React from 'react'
+import CategoriesContainer from '../../components/CategoriesContainer'
+
 
 export default function AllCategoriesPage() {
   return (
-    <div>AllCategoriesPage</div>
+    <div>
+      <CategoriesContainer />
+    </div>
   )
 }

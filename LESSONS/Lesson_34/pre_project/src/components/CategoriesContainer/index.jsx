@@ -8,10 +8,8 @@ export default function CategoriesContainer() {
 
   return (
     <div>
-        {
-             
-            categories_state.map(el => <CategoryCard key={el} category={el} />)
-              
+        {             
+        categories_state.map(el => <CategoryCard key={el} category={el} />)
         }
     </div>
   )
