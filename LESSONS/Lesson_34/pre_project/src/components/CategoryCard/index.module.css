@@ -15,7 +15,8 @@
     color: white;
   }
 
-  a {
+  /* перенесены в app.js для защиты от протекания стилей */
+  /* a {
     text-decoration: none;
     color: black;
-  }
+  } */
