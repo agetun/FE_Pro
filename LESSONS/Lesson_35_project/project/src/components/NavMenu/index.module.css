@@ -11,3 +11,98 @@
     text-decoration: none;
     color: white;
   }
+
+  .nav_menu>a:last-child {
+  	position: absolute;
+  	top: 10px;
+  	/* Располагаем элемент в верхнем краю */
+  	right: 30px;
+  	/* Располагаем элемент в правом краю */
+  }
+
+  .nav_menu img {
+    width: 50px;
+      position: absolute;
+      top: 8px;
+      /* Располагаем элемент в верхнем краю */
+    left: 30px;;
+      /* Располагаем элемент в левому краю */
+    }
+
+
+  /* .nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    background-color: #34495e;
+    position: fixed;
+  } */
+  
+  /* .nav a {
+    padding: 5px 10px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+  } */
+  
+  /* .nav .active {
+    border: 2px solid rgb(200, 90, 90);
+  } */
+
+  /* .nav>a:last-child { */
+  	/* position: absolute; */
+  	/* top: 10px; */
+  	/* Располагаем элемент в верхнем краю */
+  	/* right: 30px; */
+  	/* Располагаем элемент в правом краю */
+  /* } */
+
+
+  /* .nav {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+    font-size: 22px;
+    background-color: lightgray;
+    padding: 0;
+  }
+  
+  .nav a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: blue;
+    line-height: 1;
+    background-color: transparent;
+  }
+  
+  .nav a:after {
+    display: block;
+    content: " ";
+    height: 2px;
+    width: 0%;
+    background-color: blue;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .nav a:hover:after,
+  .nav a:focus:after {
+    width: 100%;
+    color: red;
+  }
+  
+  .nav a:hover {
+    color: red;
+    box-shadow: 0 0 25px rgba(255, 2557, 255, 0.2);
+  }
+  
+  .nav .active {
+    color: red;
+  }
+   */

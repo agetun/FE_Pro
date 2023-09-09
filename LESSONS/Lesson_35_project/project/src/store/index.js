@@ -4,7 +4,8 @@ import { categoriesReducer } from "./reducer/categoriesReducer";
 import { productsByCategoryReducer } from "./reducer/productsByCategoryReducer";
 import { allProductsReducer } from "./reducer/allProductsReducer";
 import { singleProductReducer } from "./reducer/singleProductReducer";
-import { productsReducer } from "./reducer/productReducer";
+import { productsReducer } from "./reducer/productsReducer";
+
 
 const rootReducer = combineReducers({
     categories: categoriesReducer,

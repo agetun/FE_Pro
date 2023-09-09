@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { addProductAction } from '../../store/reducer/productReducer';
+import { addProductAction } from '../../store/reducer/productsReducer';
 
 
 export default function AddProductForm() {
