@@ -25,9 +25,12 @@ export default function SingleProductPage() {
         <p>Description: {description}</p>
         <p>Price: {price}$</p>
         <p>Rating: { rating && rating.rate }. Based on { rating && rating.count } reviews</p>
+
         <Link to={`/categories/${category}`}>
           <p>{category}</p>
         </Link>
+        <div className={s.add_btn}>Add to card</div>
+        
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './index.module.css'
 import { useDispatch } from 'react-redux'
-import { decrementCountAction, deleteFromCartAction, incrementCountAction } from '../../store/reducers/cartReducer'
+import { decrementCountAction, deleteFromCartAction, incrementCountAction } from '../../store/reducer/cartReducer'
 
 
 export default function CartItem({ id, title, price, count }) {

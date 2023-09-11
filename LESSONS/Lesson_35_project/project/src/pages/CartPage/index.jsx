@@ -1,11 +1,11 @@
 import React from 'react'
-import AddProductForm from '../../components/AddProductForm'
+import Cart from '../../components/Cart'
 
 
 export default function CartPage() {
   return (
     <div>
-      <AddProductForm />      
+      <Cart />      
     </div>
   )
 }

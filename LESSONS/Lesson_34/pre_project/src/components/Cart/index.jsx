@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import CartItem from '../CartItem'
 import s from './index.module.css'
 import { useDispatch } from 'react-redux'
-import { clearCartAction } from '../../store/reducers/cartReducer'
+import { clearCartAction } from '../../store/reducer/cartReducer'
 
 export default function Cart() {
 
