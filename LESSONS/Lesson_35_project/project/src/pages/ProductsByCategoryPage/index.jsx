@@ -18,7 +18,10 @@ export default function ProductsByCategoryPage() {
 
   return (
     <div>
-      <ProductsContainer products={products_by_category_state}/>        
+      <ProductsContainer
+        products={products_by_category_state}
+        category_show={false}
+        />        
       
     </div>
   )
