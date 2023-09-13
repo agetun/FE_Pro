@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getSingleProduct } from '../../request/products_req' 
 import { useParams } from 'react-router-dom'
 import s from './index.module.css'
+import { addToCartAction } from '../../store/reducer/cartReducer'
 // import { Link } from 'react-router-dom'
 
 export default function SingleProductPage() {
@@ -28,10 +29,12 @@ export default function SingleProductPage() {
         <p>Price: {price}$</p>  
         <p>Discount: {discont_price}</p> 
 
-         {/* <Link to={`/categories/${id}`}> */}
-          {/* <p>{id}</p> */}
-        {/* </Link> */}
-        {/* <div className={s.add_btn}>Add to card</div>     */}
+        <div className={s.add_btn}
+				  
+				  onClick={() => dispatch(addToCartAction({ id,  title, price }))}				  
+			  >
+          Add to card
+        </div>
        
       </div>
     </div>
