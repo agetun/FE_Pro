@@ -3,8 +3,7 @@ import { useSelector } from 'react-redux'
 import ProductsContainer from '../../components/ProductsContainer'
 import SortForm from '../../components/FilterForms/SortForm'
 import FilterForm from '../../components/FilterForms/FilterForm'
-import CheapProductForm from '../../components/FilterForms/CheapProductForm'
-
+import DiscountProductForm from '../../components/FilterForms/DiscountProductForm'
 
 export default function AllProductsPage() {
 
@@ -18,7 +17,7 @@ export default function AllProductsPage() {
 
       <SortForm />
       
-      <CheapProductForm />    
+      <DiscountProductForm />    
       <ProductsContainer products={all_products_state} />
     </div>
   )

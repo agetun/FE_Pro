@@ -1,12 +1,12 @@
 const LOAD_ALL_PRODUCTS = 'LOAD_ALL_PRODUCTS';
 const SORT_PRODUCTS = 'SORT_PRODUCTS';
 const FILTER_PRODUCTS = 'FILTER_PRODUCTS';
-const GET_CHEAP_PRODUCTS = 'GET_CHEAP_PRODUCTS';
+const GET_DISCOUNT_PRODUCTS = 'GET_DISCOUNT_PRODUCTS';
 
 export const loadAllProductsAction = payload => ({ type: LOAD_ALL_PRODUCTS, payload });
 export const sortProductsAction = payload => ({ type: SORT_PRODUCTS, payload });
 export const filterProductsAction = payload => ({ type: FILTER_PRODUCTS, payload });
-export const getCheapProductsAction = payload => ({ type: GET_CHEAP_PRODUCTS, payload });
+export const getDiscountProductsAction = payload => ({ type: GET_DISCOUNT_PRODUCTS, payload });
 
 export const allProductsReducer = (state=[], action) => {
   if(action.type === LOAD_ALL_PRODUCTS){
@@ -38,10 +38,10 @@ export const allProductsReducer = (state=[], action) => {
     })
   } 
   
-  else if (action.type === GET_CHEAP_PRODUCTS) {
+  else if (action.type === GET_DISCOUNT_PRODUCTS) {
     if(action.payload){
       return state.map(el => {
-        if(el.price > 100){
+        if(el.discont_price === null){
           el.show_product = false
         }
         return el

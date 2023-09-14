@@ -1,9 +1,9 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { getCheapProductsAction } from '../../../store/reducer/allProductsReducer';
+import { getDiscountProductsAction } from '../../../store/reducer/allProductsReducer'; 
 import { useState } from 'react';
 
-export default function CheapProductForm() {
+export default function DiscountProductForm() {
 
    const dispatch = useDispatch();
 
@@ -13,13 +13,13 @@ export default function CheapProductForm() {
 
   console.log(checkboxChecked);
 
-  const get_products = e => dispatch(getCheapProductsAction(e.target.checked));
+  const get_products = e => dispatch(getDiscountProductsAction(e.target.checked));
 
 
   return (
     <div>
        <label>
-        <p>Items cheaper than 100$:</p>
+        <p>Discounted items:</p>
         <input type='checkbox' checked={checkboxChecked} onChange={handleChange} onClick={get_products} />
       </label>
     </div>
