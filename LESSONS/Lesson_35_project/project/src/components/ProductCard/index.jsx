@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import { addToCartAction } from '../../store/reducer/cartReducer'
 
 
-export default function ProductCard({ id, title, image, price, discont_price, description, createdAt, updatedAt, categoryId }) {
+export default function ProductCard({ id, title, discont_price, image, price }) {
 
   const dispatch = useDispatch();
 
@@ -14,20 +14,25 @@ export default function ProductCard({ id, title, image, price, discont_price, de
         <Link to={`/products/${id}`}>
           <div className={s.product_card}>
             <img src={`http://localhost:3333${image}`} alt={title} />
+
+            {discont_price && discont_price > 0 ? (
+            <p>
+              Discount:{discont_price}$
+			  <br/>
+			  Price:<span className={s['discounted-price']}>{price}$</span>
+            </p>
+          ):(
+            <p>Price:{price}$</p>
+          )}
+
               <p>{ title }</p>
-              <p>{ price }$</p>
-              {/* <p>{ discont_price }</p> */}
-              {/* <p>{ description }</p> */}
-              {/* <p>{ createdAt }</p> */}
-              {/* <p>{ updatedAt }</p> */}
-              {/* <p>{ categoryId }</p> */}
-              
+                            
           </div>
       </Link>
       
       <div 
     className={s.add_btn}
-    onClick={() => dispatch(addToCartAction({ id, image, title, price }))}
+    onClick={() => dispatch(addToCartAction({ id, image, title, price, discont_price }))}
     >
       Add to cart</div>
 

@@ -1,24 +1,43 @@
 .card {
-    border: 2px solid pink;
-    padding: 15px;
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .card button {
-    background-color: green;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-    margin: 0 5px;
-    border-radius: 7px;
+	border: 2px solid rgb(207, 205, 205);
+	padding: 15px;
+	margin: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card button {
+	background-color: green;
+	color: white;
+	cursor: pointer;
+	padding: 10px;
+	border: none;
+	margin: 0 5px;
+	border-radius: 7px;
+}
+
+.card img {
+    height:  150px;
+    width: 150px;
+    border-radius: 10%;
+    object-fit: contain;
   }
 
-  .card img {
-    height: 150px;
-    width: 150px;
-    object-fit: contain;
+  .card p:nth-child(3) {
+    color: grey;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .card p:nth-child(4) {
+    color: rgb(220, 20, 177);
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  span {
+    cursor: pointer;   
+    font-weight: 900;
+    color: rgb(44, 43, 43);
   }

@@ -21,21 +21,26 @@
 
 .card_item {
   position: relative;
+  
 }
 
-.product_card {
-  border: 1px solid black;
+.product_card {  
+  width: 318px;
+  height: 350px;
+  /* border: 1px solid black; */
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
+  margin: 10px;
 }
 
 .product_card img {
-  height: 150px;
-  width: 150px;
+  width: 318px;
+  height: 350px;  
   object-fit: contain;
+  border-radius: 10%;
 }
 
 .product_card p:nth-child(2) {
@@ -66,3 +71,8 @@
 .card_item:hover .add_btn {
   visibility: visible;
 }
+
+.discounted-price {
+	text-decoration: line-through; /* Перечеркивание текста */
+	color: gray; /* Цвет для перечеркнутой цены (по вашему выбору) */
+  }

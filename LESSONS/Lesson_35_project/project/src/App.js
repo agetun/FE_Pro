@@ -13,6 +13,7 @@ import { getAllCategories } from './request/categories_req';
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react';
 import { getAllProducts } from './request/products_req';
+import AllSales from './pages/AllSales';
 
  
 
@@ -37,6 +38,7 @@ function App() {
         <Route path='/products' element={<AllProductsPage />} />
         <Route path='/products/:id' element={<SingleProductPage />} />
         <Route path='/cart' element={<CartPage />} />
+        <Route path='/sales' element={<AllSales />}/>
         <Route path='*' element={<NotFoundPage />} />
       </Routes>      
       <Footer />

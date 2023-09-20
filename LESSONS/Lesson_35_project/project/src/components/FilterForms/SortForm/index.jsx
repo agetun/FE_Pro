@@ -12,7 +12,7 @@ export default function SortForm() {
     <div>
       <label>
       <p>Sorted:</p>
-        <select onInput={order} defaultValue='default'>
+        <select onInput={order}>
           <option value='default'>By default</option>
           <option value='title'>By alphabet A-Z</option>
           <option value='price_asc'>By price ASC</option>

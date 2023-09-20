@@ -11,7 +11,7 @@ export const decrementCountAction = payload => ({ type: DECREMENT_COUNT, payload
 export const clearCartAction = () => ({ type: CLEAR_CART });
 
 const checkProduct = (state, payload) => {
-  const productInCart = state.find(el => el.id === payload.id);
+  const productInCart = state.find(el => el.id === +payload.id);
   if(!productInCart){
     return [...state, {...payload, count: 1}]
   } else {
@@ -25,9 +25,11 @@ export const cartReducer = (state=[], action) => {
     return checkProduct(state, action.payload)
   } else if (action.type === DELETE_FROM_CART) {
     return state.filter(el => el.id !== action.payload)
+
   } else if(action.type === INCREMENT_COUNT) {
     state.find(el => el.id === action.payload).count++
     return [...state]
+
   } else if(action.type === DECREMENT_COUNT){
     const product = state.find(el => el.id === action.payload);
     if(product.count === 1){
@@ -39,6 +41,6 @@ export const cartReducer = (state=[], action) => {
   } else if(action.type === CLEAR_CART) {
     return []
   } else {
-    return state
+    return [...state]
   }
 }

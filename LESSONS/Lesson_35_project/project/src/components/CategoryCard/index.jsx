@@ -12,11 +12,10 @@ export default function CategoryCard({ id, title, image }) {
     <Link to={`/categories/${id}`}>
         <div className={s.category_card}>
 
-          {/* {title} */}
-          
-         {/* это для отрисовки картинок с названием категории, потом стили переделать */}
-      <h3>{title}</h3>
+                
 		  <img src={`http://localhost:3333${image}`} alt={title} />
+
+      <h3>{title}</h3>
             
         </div>
     </Link>
@@ -24,18 +23,4 @@ export default function CategoryCard({ id, title, image }) {
 }
 
 
-// export default function CategoryCard({ title, image }) {
-    
-  
 
-//   return (
-//     // <Link to={`/categories/${id}`}>
-//         <div className={s.category_card}>
-
-//           <img src={`http://localhost:3333${image}`} alt={title} />
-//           <h3>{title}</h3>
-            
-//         </div>
-//     // </Link>
-//   )
-// }

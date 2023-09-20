@@ -16,6 +16,7 @@ export default function FilterForm() {
 
   return (
     <form onSubmit={submit}>
+      <p>Price:</p>
       <input type='number' placeholder='min' name='min' />
       <input type='number' placeholder='max' name='max' />
       <button>Filter</button>

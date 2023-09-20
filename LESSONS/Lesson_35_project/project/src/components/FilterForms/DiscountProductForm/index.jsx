@@ -11,16 +11,16 @@ export default function DiscountProductForm() {
 
   const handleChange = () => setCheckboxChecked(!checkboxChecked);
 
-  console.log(checkboxChecked);
+  // console.log(checkboxChecked);
 
-  const get_products = e => dispatch(getDiscountProductsAction(e.target.checked));
+  const get_discount_products = e => dispatch(getDiscountProductsAction(e.target.checked));
 
 
   return (
     <div>
        <label>
         <p>Discounted items:</p>
-        <input type='checkbox' checked={checkboxChecked} onChange={handleChange} onClick={get_products} />
+        <input type='checkbox' checked={checkboxChecked} onChange={handleChange} onClick={get_discount_products} />
       </label>
     </div>
   )
