@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
-import sale_img from '../../images/sale_img.png'
+// import sale_img from '../../images/sale_img.png'
 import { Link } from 'react-router-dom'
 import CategoriesContainer from '../../components/CategoriesContainer'
 import ProductsContainer  from '../../components/ProductsContainer'
 import s from './index.module.css'
 import gnome from '../../images/gnome.png'
+import bush from '../../images/bush.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllProducts } from '../../request/products_req'
 
@@ -22,19 +23,20 @@ export default function MainPage() {
   
 
   return (
-    <div>
-      
+    <div className={s.wrapper}>      
 
-      <div className={s.sale_container}>
-        <div className={s.image}>
+      <div className={s.sale_container}> 
           <div className={s.text}>
-                        
-            <Link to={'/sales'} className={s.links}>
-              <div className={s.sale_btn}><img src={sale_img} alt='Sale' /></div>
-            </Link>
-          </div>
+             <p>Sale</p>
+             <p>New season</p> 
+             <Link to={'/sales'} className={s.sale_btn}>
+               Sale
+             </Link>
+          </div>            
 
-        </div>
+          <div className={s.bush}>
+                <img src={bush} alt='Bush' />
+          </div>        
       </div>
 
 

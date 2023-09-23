@@ -5,6 +5,7 @@ import { decrementCountAction, deleteFromCartAction, incrementCountAction } from
 
 
 export default function CartItem({ id, title, price, count, image, discont_price }) {
+	
 	const dispatch = useDispatch();
   
 	return (

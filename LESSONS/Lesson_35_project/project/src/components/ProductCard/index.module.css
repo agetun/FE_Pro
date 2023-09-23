@@ -1,78 +1,81 @@
-/* 
-
-.product_card {
-	padding: 100px;
-	border: 1px solid #ccc;
-	text-align: center;
-}
-
-.product_card img {
-	max-width: 100%;
-	height: auto;
-	margin-bottom: 10px;
-}
-
-.product_card p {
-	font-size: 25px;
-	font-weight: bold;
-	color: #333;
-} */
-
-
 .card_item {
   position: relative;
-  
 }
 
-.product_card {  
-  width: 318px;
-  height: 350px;
-  /* border: 1px solid black; */
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;  
-  margin: 10px;
-}
-
-.product_card img {
-  width: 318px;
-  height: 350px;  
-  object-fit: contain;
-  border-radius: 10%;
-}
-
-.product_card p:nth-child(2) {
-  text-align: center;
-  margin: 4px 0;
-}
-
-.product_card p:last-child {
-  color: darkmagenta;
-  font-weight: 700;
-}
-
-
-.add_btn {
-  visibility: hidden;
-  cursor: pointer;
-  background-color: rgb(144, 238, 144);
-  color: green;
-  border: 2px solid green;
-  border-radius: 10px;
-  padding: 10px;
-  width: fit-content;
-  position: absolute;
-  top: 50%;
-  left: 30%;
-}
-
-.card_item:hover .add_btn {
-  visibility: visible;
-}
-
-.discounted-price {
-	text-decoration: line-through; /* Перечеркивание текста */
-	color: gray; /* Цвет для перечеркнутой цены (по вашему выбору) */
+.card {
+    /* border: 1px solid black; */
+    padding: 10px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
   }
+  
+  .card img {
+    border-radius: 10%;   
+    height: 300px;
+    width: 300px;
+    object-fit: contain;
+  }
+  
+  .price_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    gap: 90px;
+  }
+
+  .price_info p:nth-child(1) {
+    text-align: center;
+    margin: 4px 0;      
+    color: black;
+    font-weight: 600;
+    font-size: 30px;
+    padding-left: 4px;
+  }
+
+  .discounted-price {
+    text-decoration: line-through; /* Перечеркивание текста */
+    color: #999; /* Цвет для перечеркнутой цены (по вашему выбору) */
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 80px;
+  }
+
+  .price_info p:nth-child(2) {    
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: red;
+  }
+
+ 
+
+  .card_item p:nth-child(3) {
+    text-align: center; 
+    font-size: 16px;
+    font-weight: 500;  
+    }
+
+
+
+  .add_btn {
+    visibility: hidden;
+    cursor: pointer;
+    background-color: rgb(198, 219, 198);
+    color: rgb(1, 107, 1);
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    font-weight: 600;
+  }
+  
+  .card_item:hover .add_btn {
+    visibility: visible;
+  }
+
+ 

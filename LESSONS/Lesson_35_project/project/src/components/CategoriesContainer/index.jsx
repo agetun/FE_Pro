@@ -9,6 +9,8 @@ export default function CategoriesContainer() {
 
 	const categories_state = useSelector(state => state.categories);
 
+	// console.log(categories_state);
+
   return (
 	<div className={s.container}>
 		{

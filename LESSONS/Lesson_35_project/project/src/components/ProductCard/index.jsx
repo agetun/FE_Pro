@@ -5,41 +5,47 @@ import { useDispatch } from 'react-redux'
 import { addToCartAction } from '../../store/reducer/cartReducer'
 
 
-export default function ProductCard({ id, title, discont_price, image, price }) {
+export default function ProductCard({ id, title, image, price, discont_price, category, category_show }) {
 
   const dispatch = useDispatch();
 
+  const countDiscont =  Math.round(discont_price ? ((price - discont_price ) / price * 100) : 0)
+
+
   return (
     <div className={s.card_item}>
-        <Link to={`/products/${id}`}>
-          <div className={s.product_card}>
-            <img src={`http://localhost:3333${image}`} alt={title} />
+      <Link to={`/products/${id}`}>
+        <div className={s.card}>
+          <img src={`http://localhost:3333${image}`} alt={title} />
+        </div>
 
+        <div className={s.price_info}>
             {discont_price && discont_price > 0 ? (
             <p>
-              Discount:{discont_price}$
-			  <br/>
-			  Price:<span className={s['discounted-price']}>{price}$</span>
+              {discont_price}$			      
+			      <span className={s['discounted-price']}>{price}$</span>
             </p>
-          ):(
-            <p>Price:{price}$</p>
-          )}
+            ):
+            (
+            <p>{price}$</p>
+            )}
+            <p>{ countDiscont}%</p>
+        </div>          
+          
 
-              <p>{ title }</p>
-                            
-          </div>
-      </Link>
-      
-      <div 
-    className={s.add_btn}
-    onClick={() => dispatch(addToCartAction({ id, image, title, price, discont_price }))}
-    >
-      Add to cart</div>
-
+        <p>{ title }</p>  
+              
+        
+      </Link> 
+        <div
+          className={s.add_btn}
+          onClick={() => dispatch(addToCartAction({ id, title, image, price, discont_price }))}
+          >
+            Add to Cart
+        </div> 
     </div>
     
   )
 }
-
 
 // discont_price, description, createdAt, updatedAt, categoryId 

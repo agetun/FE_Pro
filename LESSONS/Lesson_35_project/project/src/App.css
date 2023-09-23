@@ -1,15 +1,19 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;  
+  box-sizing: border-box; 
+  font-family: 'Montserrat', sans-serif; 
 }
 
+
+
 #root {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   max-width: 1440px;
   margin: 0 auto;
+  /* background-image: url(../src/images/flower_1.jpg); */
 }
 
 a {
