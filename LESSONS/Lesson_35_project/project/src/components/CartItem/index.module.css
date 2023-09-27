@@ -1,4 +1,99 @@
+/* .h1_title {
+  margin-top: 50px;
+} */
 .card {
+  border: 2px solid rgb(197, 197, 197);
+  width: 950px;
+  padding: 15px;
+  margin: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.discr_cont {
+  display: flex;
+  flex-direction: column;    
+  margin-left: 20px;
+  width: 300px;       
+}
+
+.inc_dic {
+  display: flex; 
+  margin-top: 70px;
+  justify-content: center; 
+  align-items: center;
+  border: 1px solid black;
+  width: 140px;
+  height: 56px;
+  border-radius: 7px;
+  gap: 20px;    
+}
+
+.inc_dic p {
+  font-size: 24px;
+}
+
+.decr_btn {  
+  color: black;
+  background-color: green;
+  cursor: pointer;
+  padding: 10px;
+  border: none;    
+  margin: 0 5px;
+  border-radius: 7px;
+  font-size: 28px;
+}  
+
+.incr_btn {    
+  color: black;
+  background-color: green;
+  cursor: pointer;
+  padding: 10px;
+  border: none;    
+  margin: 0 5px;
+  border-radius: 7px;
+  font-size: 28px;
+}
+
+.card img {
+  height:  150px;
+  width: 150px;
+  border-radius: 10%;
+  object-fit: contain;
+} 
+
+.price_dis {
+  display: flex; 
+  width: 300px;     
+  justify-content:space-between;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.price_dis p:first-child {
+  color: black;
+  font-weight: 600;
+  font-size: 40px;    
+}
+
+.price_dis p:nth-child(2) {
+  text-decoration: line-through; /* Перечеркивание текста */
+  color: #999; /* Цвет для перечеркнутой цены (по вашему выбору) */
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 80px;
+}
+
+.kreuz{
+  cursor: pointer;   
+  font-size: 20px;
+  color: black;
+  /* padding-top: 10px; */
+}
+
+
+/* .card {
   border: 2px solid rgb(197, 197, 197);
   padding: 15px;
   margin: 10px 0;
@@ -40,4 +135,4 @@ span {
   cursor: pointer;   
   font-weight: 900;
   color: blue;
-}
+} */

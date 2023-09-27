@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CartItem from '../CartItem';
 import s from './index.module.css'
@@ -16,6 +16,17 @@ export default function Cart() {
     return acc + totalPrice * count} , 0)
 
 
+    const [phoneNumber, setPhoneNumber] = useState('');
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      
+      // Вы можете здесь выполнить необходимые действия с номером телефона,
+      // например, отправить его на сервер для обработки.
+      alert(`Заказ размещен с номером телефона: ${phoneNumber}`);
+  };
+
+
   return (
     <div>
       {/* <p>Cart:</p> */}
@@ -27,9 +38,23 @@ export default function Cart() {
         <div className={s.clear_btn}
         onClick={() => dispatch(clearCartAction())}
         >
-          Clear cart
-          </div>
-          <p>Total: {total}$</p>
+          Clear cart          
+        </div>
+          
+
+          <form onSubmit={handleSubmit} className={s.order}>
+            <p>Order details</p>
+            <p>Total: {total}$</p>
+            <input
+              type="number"
+              placeholder="Phone number"
+              name="phone"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+        />
+            <button type="submit">Order</button>
+          </form>
+
     </div>
   )
 }
