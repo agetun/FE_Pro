@@ -7,6 +7,13 @@ h1{
     font-weight: bold;
 }
 
+.filter button {
+    font-size: 15px;
+    border-radius: 7px; 
+    margin: 3px;
+    padding: 3px;
+}
+
 .title{
     font-size: 20px;
     font-weight: 600;

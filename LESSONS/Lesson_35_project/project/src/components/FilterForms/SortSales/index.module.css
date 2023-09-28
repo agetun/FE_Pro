@@ -7,6 +7,13 @@ h1{
     font-weight: bold;
 }
 
+.filter button {
+    font-size: 15px;
+    border-radius: 7px; 
+    margin: 3px;
+    padding: 3px;
+}
+
 .title{
     font-size: 20px;
     font-weight: 600;
@@ -20,7 +27,7 @@ h1{
 
 .price input {
     width: 100px;
-    height: 2px;
+    height: 42px;
     color: #ACACAC;
     padding: 10px;
     border-radius: 7px; 
@@ -28,12 +35,21 @@ h1{
 
 
 .sort_container{
-    margin: 50px ;
+    margin: 80px 0 45px 0;
     display: flex;
-    gap: 90px;
+    gap: 50px;
 }
 
+.discount{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
+.discount input{
+    width: 40px;
+    height: 40px;
+}
  
 .sorted{
     display: flex;
@@ -44,6 +60,6 @@ h1{
 
 .sorted select{
     width: 220px;
-    height: 20px;
+    height: 40px;
     border-radius: 7px;
 }

@@ -8,6 +8,8 @@ import gnome from '../../images/gnome.png'
 import bush from '../../images/bush.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllProducts } from '../../request/products_req'
+import { useForm } from 'react-hook-form'
+
 
 export default function MainPage() {
 
@@ -20,6 +22,21 @@ export default function MainPage() {
   const first_four_products = products.filter(el => el.discont_price !== null).slice(0,4)
 
   // console.log(first_four_products);
+
+
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    mode: 'onChange'
+});
+
+const phoneNumberRegister = register('phoneNumber', {
+    required: "*This field is required",
+    pattern: {
+        value: /^(?:\+49|0)[1-9][0-9]*(?:[\s-]?\d+)*$/,
+        message: '*Please, enter valid phoneNumber address'
+    }    
+});
+
+const submit = data => alert(`Вы получили скидку 5%: ${data.phoneNumber}`);
   
 
   return (
@@ -52,8 +69,27 @@ export default function MainPage() {
       </div>
 
 
-
+      
       <div className={s.dwarf_wrapper}>
+        <img src={gnome} alt="Gnome" />
+        <div className={s.discount_descr}>
+          <h1>5% off</h1>
+          <h2>on the first order</h2>
+          <form onSubmit={handleSubmit(submit)}>
+                        <input type="text" className={s.phone_num_inp} placeholder='+49' name='phoneNumber' {...phoneNumberRegister}
+                        />
+
+                        {errors.phoneNumber && <p className={s.error_msg}>{errors.phoneNumber?.message}</p>}
+
+
+
+                        <button className={s.discount_btn}>Get a discount</button>
+                    </form>
+        </div>
+      </div>
+
+
+      {/* <div className={s.dwarf_wrapper}>
         <img src={gnome} alt="Gnome" />
         <div className={s.discount_descr}>
           <h1>5% off</h1>
@@ -61,7 +97,7 @@ export default function MainPage() {
           <input type="text" className={s.phone_num_inp} placeholder='+49' />
           <button className={s.discount_btn}>Get a discount</button>
         </div>
-      </div>
+      </div> */}
 
 
 
