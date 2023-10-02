@@ -7,7 +7,7 @@ import s from './index.module.css'
 import gnome from '../../images/gnome.png'
 import bush from '../../images/bush.png'
 import { useDispatch, useSelector } from 'react-redux'
-import { getAllProducts } from '../../request/products_req'
+import { addNewProductSale, getAllProducts } from '../../request/products_req'
 import { useForm } from 'react-hook-form'
 
 
@@ -24,7 +24,7 @@ export default function MainPage() {
   // console.log(first_four_products);
 
 
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, reset, formState: { errors } } = useForm({
     mode: 'onChange'
 });
 
@@ -36,7 +36,13 @@ const phoneNumberRegister = register('phoneNumber', {
     }    
 });
 
-const submit = data => alert(`Вы получили скидку 5%: ${data.phoneNumber}`);
+// const submit = data => alert(`Вы получили скидку 5%: ${data.phoneNumber}`);
+
+const submit = new_product_obj => {
+  addNewProductSale(new_product_obj);
+  reset()
+
+}
   
 
   return (

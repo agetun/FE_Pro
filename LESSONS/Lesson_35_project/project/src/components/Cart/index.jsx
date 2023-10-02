@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import CartItem from '../CartItem';
 import s from './index.module.css'
 import { clearCartAction } from '../../store/reducer/cartReducer';
+import { sendOrder } from '../../request/products_req';
 
 
 export default function Cart() {
@@ -21,7 +22,9 @@ export default function Cart() {
     const handleSubmit = (e) => {
       e.preventDefault();
       
-      alert(`Заказ размещен с номером телефона: ${phoneNumber}`);
+      // alert(`Заказ размещен с номером телефона: ${phoneNumber}`);
+      sendOrder()
+      e.target.reset()
   };
 
 

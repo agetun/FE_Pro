@@ -9,6 +9,7 @@ export default function NavMenu() {
         <Link to='/categories'>All Categories</Link>
         <Link to='/products'>All Products</Link>
         <Link to='/cart'>Cart</Link>
+        <Link to='/users'>Users</Link>
     </div>
   )
 }
